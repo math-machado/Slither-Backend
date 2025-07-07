@@ -3,9 +3,9 @@ CREATE TABLE "users" (
     "id" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "email" TEXT NOT NULL,
-    "cash" DOUBLE PRECISION NOT NULL DEFAULT 0,
     "password" TEXT NOT NULL,
     "cpf" TEXT NOT NULL,
+    "cash" DOUBLE PRECISION NOT NULL DEFAULT 0,
     "birth_date" DATE,
     "created_at" TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP,
     "updated_at" TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP,
@@ -17,10 +17,10 @@ CREATE TABLE "users" (
 CREATE TABLE "rooms" (
     "id" TEXT NOT NULL,
     "value_room" DOUBLE PRECISION NOT NULL,
-    "max_users" INTEGER NOT NULL,
-    "number_users" INTEGER,
     "created_at" TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP,
     "updated_at" TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP,
+    "max_users" INTEGER NOT NULL,
+    "number_users" INTEGER,
 
     CONSTRAINT "rooms_pkey" PRIMARY KEY ("id")
 );
