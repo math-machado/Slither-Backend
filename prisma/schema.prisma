@@ -21,7 +21,7 @@ model User {
   cash       Float    @default(0)
   password   String
   cpf        String   @unique
-  birth_date DateTime @db.Date
+  birth_date DateTime? @db.Date
 
   created_at DateTime? @default(now())
   updated_at DateTime? @default(now())
