@@ -5,7 +5,7 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-  provider = "prisma-client-js"
+  provider      = "prisma-client-js"
   binaryTargets = ["native", "rhel-openssl-3.0.x"]
 }
 
@@ -15,12 +15,13 @@ datasource db {
 }
 
 model User {
-  id       String @id @default(uuid())
-  name     String
-  email    String @unique
-  cash     Float  @default(0)
-  password String
-  cpf      String @unique
+  id         String   @id @default(uuid())
+  name       String
+  email      String   @unique
+  cash       Float    @default(0)
+  password   String
+  cpf        String   @unique
+  birth_date DateTime @db.Date
 
   created_at DateTime? @default(now())
   updated_at DateTime? @default(now())
