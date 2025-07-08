@@ -86,7 +86,10 @@ export const GameDashboard: React.FC = () => {
                         min="0.1"
                         step="0.1"
                         value={gameValue}
-                        onChange={(e) => setGameValue(parseFloat(e.target.value))}
+                        onChange={(e) => {
+                          const value = parseFloat(e.target.value);
+                          setGameValue(isNaN(value) ? 1 : value);
+                        }}
                         className="w-full pl-10 pr-4 py-3 bg-black/30 border border-green-500/50 rounded-lg text-white focus:outline-none focus:border-green-400"
                       />
                     </div>
