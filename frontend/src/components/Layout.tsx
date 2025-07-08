@@ -27,7 +27,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 
                 <div className="flex items-center space-x-2 text-yellow-400">
                   <Coins className="w-5 h-5" />
-                  <span className="font-bold">${user.cash.toFixed(2)}</span>
+                  <span className="font-bold">${user.cash?.toFixed(2) ?? '0.00'}</span>
                 </div>
                 
                 <button
